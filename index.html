@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía Interactiva · Plan 03/07 · 3. Reglas generales de acentuación · 5to. Bachillerato en Mercadotecnia 2027</title>
+  <style>
+    :root {
+      --azul: #1269A8;
+      --amarillo: #F7D615;
+      --verde-gris: #54887D;
+      --azul-claro: #88B5C7;
+      --oliva: #A6B046;
+      --fondo: #F2F5E9;
+      --texto: #1e293b;
+      --blanco: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      padding: 16px;
+      line-height: 1.55;
+    }
+    .marco {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: var(--blanco);
+      border: 3px solid var(--amarillo);
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(18, 105, 168, 0.14);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, var(--azul) 0%, #0d4f80 100%);
+      color: var(--blanco);
+      padding: 18px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 4px solid var(--amarillo);
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1 1 540px;
+    }
+    .logo-badge {
+      min-width: 72px;
+      height: 68px;
+      background: var(--blanco);
+      color: var(--azul);
+      border-radius: 10px;
+      padding: 6px 10px;
+      border: 2px solid var(--amarillo);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-align: center;
+      line-height: 1.15;
+    }
+    .inst-tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--amarillo);
+      font-weight: 700;
+    }
+    .header h1 {
+      font-size: 1.28rem;
+      font-weight: 700;
+      margin: 3px 0;
+    }
+    .header p {
+      font-size: 0.9rem;
+      opacity: 0.94;
+    }
+    .btn-fs {
+      background: var(--amarillo);
+      color: #102a43;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .sub-bar {
+      background: #e8f1f7;
+      padding: 10px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      border-bottom: 2px solid var(--azul-claro);
+    }
+    .date-input {
+      border: 1px solid var(--azul);
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-family: inherit;
+      font-size: 0.84rem;
+      color: var(--texto);
+      background: var(--blanco);
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      background: #dce8ef;
+      padding: 8px 16px 0 16px;
+      gap: 6px;
+      border-bottom: 3px solid var(--azul);
+    }
+    .tab-btn {
+      background: var(--blanco);
+      color: var(--azul);
+      border: 2px solid var(--azul-claro);
+      border-bottom: none;
+      padding: 10px 18px;
+      border-radius: 10px 10px 0 0;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.92rem;
+    }
+    .tab-btn.active {
+      background: var(--azul);
+      color: var(--blanco);
+      border-color: var(--azul);
+    }
+    .tab-panel {
+      display: none;
+      padding: 22px 24px;
+    }
+    .tab-panel.active {
+      display: block;
+    }
+    .section-sub {
+      color: var(--azul);
+      font-size: 1.08rem;
+      margin: 18px 0 10px 0;
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--amarillo);
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .card {
+      background: var(--blanco);
+      border: 2px solid var(--verde-gris);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .card h3 {
+      color: var(--verde-gris);
+      margin: 6px 0;
+      font-size: 1.05rem;
+    }
+    .card-ejemplo {
+      background: var(--blanco);
+      border: 2px solid var(--verde-gris);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .card-ejemplo h4, .card-ejercicio h4 {
+      color: var(--azul);
+      margin: 6px 0;
+      font-size: 0.98rem;
+    }
+    .card-ejercicio {
+      background: rgba(136, 181, 199, 0.22);
+      border: 2px solid var(--azul-claro);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .badge-nivel {
+      display: inline-block;
+      background: var(--oliva);
+      color: var(--blanco);
+      font-weight: 700;
+      font-size: 0.76rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+    .resp-area {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid var(--verde-gris);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      background: #fcfdf9;
+      resize: vertical;
+    }
+    .footer-note {
+      background: #f8faf5;
+      border-top: 2px solid var(--azul-claro);
+      padding: 12px 24px;
+      font-size: 0.8rem;
+      color: #475569;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="guiaRoot" class="marco">
+    <header class="header">
+      <div class="header-left">
+        <div class="logo-badge">COLEGIO<br/>MONTANO</div>
+        <div>
+          <div class="inst-tag">Colegio Montano · Guía Interactiva · Quinto Bachillerato en Mercadotecnia · Unidad I</div>
+          <h1>Guía Interactiva · Plan 03/07 — 3. Reglas generales de acentuación</h1>
+          <p>Reglas generales de acentuación: agudas, graves, esdrújulas y sobresdrújulas</p>
+        </div>
+      </div>
+      <button class="btn-fs" type="button" onclick="toggleFullScreen()">&#9974; Pantalla Completa</button>
+    </header>
+
+    <div class="sub-bar">
+      <div><strong>Docente:</strong> Brenda Hidalgo</div>
+      <div><strong>Curso:</strong> Comunicación · <strong>Carrera:</strong> Quinto Bachillerato en Mercadotecnia · <strong>Ciclo:</strong> 2027</div>
+      <div><strong>Periodo:</strong> 11 de enero al 5 de marzo · <strong>Fecha editable:</strong> <input class="date-input" type="date" value="2027-01-25" aria-label="Fecha editable" /></div>
+      <div><strong>Plan asociado:</strong> plan_03_tema_03.html</div>
+    </div>
+
+    <nav class="tabs" role="tablist" aria-label="Secciones de la guía interactiva">
+      <button class="tab-btn active" type="button" onclick="openTab(event, 'g-teoria')">Teoría</button>
+      <button class="tab-btn" type="button" onclick="openTab(event, 'g-ejemplos')">Ejemplos (15)</button>
+      <button class="tab-btn" type="button" onclick="openTab(event, 'g-ejercicios')">Ejercicios (15)</button>
+      <button class="tab-btn" type="button" onclick="openTab(event, 'g-reflexion')">Reflexión</button>
+      <button class="tab-btn" type="button" onclick="openTab(event, 'g-evaluacion')">Evaluación</button>
+    </nav>
+
+    <section id="g-teoria" class="tab-panel active">
+      <h3 class="section-sub">Fundamentación Conceptual y Propósito de la Sesión</h3>
+      <div class="cards-grid">
+        
+        <div class="card">
+          <span class="badge-nivel">Fundamento 1</span>
+          <h3>Sílaba tónica y clasificación según su posición</h3>
+          <p>Según dónde recae la mayor fuerza de voz (sílaba tónica), las palabras polisílabas se clasifican en agudas (última sílaba), graves o llanas (penúltima sílaba), esdrújulas (antepenúltima sílaba) y sobresdrújulas (anterior a la antepenúltima).</p>
+        </div>
+        <div class="card">
+          <span class="badge-nivel">Fundamento 2</span>
+          <h3>Regla general de agudas y graves</h3>
+          <p>Las palabras agudas llevan tilde cuando terminan en n, s o vocal (no precedida de otra consonante que forme grupo incompatible, como en &#x27;canalé&#x27;, &#x27;compás&#x27;, &#x27;sofá&#x27;; mientras &#x27;reloj&#x27; o &#x27;papel&#x27; no llevan tilde). Las graves llevan tilde cuando NO terminan en n, s ni vocal (como &#x27;árbol&#x27;, &#x27;lápiz&#x27;, &#x27;fácil&#x27;; mientras &#x27;casa&#x27; o &#x27;joven&#x27; no llevan tilde).</p>
+        </div>
+        <div class="card">
+          <span class="badge-nivel">Fundamento 3</span>
+          <h3>Regla general de esdrújulas y sobresdrújulas</h3>
+          <p>Todas las palabras esdrújulas (como &#x27;público&#x27;, &#x27;análisis&#x27;, &#x27;económico&#x27;) y todas las sobresdrújulas (como &#x27;explícaselo&#x27;, &#x27;cómpramelo&#x27;) llevan tilde siempre, sin excepción.</p>
+        </div>
+        <div class="card">
+          <span class="badge-nivel">Sesión 3 de 7 · Unidad I</span>
+          <h3>Enfoque de la Clase y Conexión Profesional</h3>
+          <p><strong>Enfoque:</strong> Identificación de sílaba tónica y aplicación de reglas generales de acentuación en palabras agudas, graves, esdrújulas y sobresdrújulas.</p>
+          <p><strong>Hábito Montano:</strong> Cuidado del detalle, corrección idiomática y excelencia escrita</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="g-ejemplos" class="tab-panel">
+      
+    <h3 class="section-sub">Nivel Básico (5 ejemplos resueltos)</h3>
+    <div class="cards-grid">
+      
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Básico · Ejemplo 1</span>
+              <h4>Palabra aguda con tilde</h4>
+              <p><strong>Planteamiento:</strong> Analizar &#x27;comunicación&#x27; (co-mu-ni-ca-ción): última sílaba tónica, termina en n.</p>
+              <p><strong>Desarrollo modelo:</strong> Es aguda terminada en n, por lo tanto lleva tilde.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Básico · Ejemplo 2</span>
+              <h4>Palabra aguda sin tilde</h4>
+              <p><strong>Planteamiento:</strong> Analizar &#x27;publicidad&#x27; (pu-bli-ci-dad): última sílaba tónica, termina en d.</p>
+              <p><strong>Desarrollo modelo:</strong> Es aguda y no termina en n, s ni vocal, por lo tanto no lleva tilde.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Básico · Ejemplo 3</span>
+              <h4>Palabra grave con tilde</h4>
+              <p><strong>Planteamiento:</strong> Analizar &#x27;líder&#x27; (lí-der): penúltima sílaba tónica, termina en r.</p>
+              <p><strong>Desarrollo modelo:</strong> Es grave terminada en consonante distinta de n o s, por lo tanto lleva tilde.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Básico · Ejemplo 4</span>
+              <h4>Palabra grave sin tilde</h4>
+              <p><strong>Planteamiento:</strong> Analizar &#x27;marca&#x27; (mar-ca): penúltima sílaba tónica, termina en a.</p>
+              <p><strong>Desarrollo modelo:</strong> Es grave terminada en vocal, por lo tanto no lleva tilde.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Básico · Ejemplo 5</span>
+              <h4>Palabra esdrújula</h4>
+              <p><strong>Planteamiento:</strong> Analizar &#x27;mercadotecnia&#x27; o &#x27;estadística&#x27; (es-ta-dís-ti-ca).</p>
+              <p><strong>Desarrollo modelo:</strong> Las esdrújulas siempre llevan tilde en su antepenúltima sílaba.</p>
+            </div>
+    </div>
+    <h3 class="section-sub">Nivel Intermedio (5 ejemplos resueltos)</h3>
+    <div class="cards-grid">
+      
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Intermedio · Ejemplo 1</span>
+              <h4>Pares que cambian de sentido con la tilde</h4>
+              <p><strong>Planteamiento:</strong> Comparar &#x27;público&#x27;, &#x27;publico&#x27; y &#x27;publicó&#x27;.</p>
+              <p><strong>Desarrollo modelo:</strong> &#x27;Público&#x27; es esdrújula (lleva tilde); &#x27;publico&#x27; es grave terminada en vocal (sin tilde); &#x27;publicó&#x27; es aguda terminada en vocal (con tilde).</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Intermedio · Ejemplo 2</span>
+              <h4>Palabras graves terminadas en -s agrupada</h4>
+              <p><strong>Planteamiento:</strong> Observar palabras como &#x27;bíceps&#x27; o &#x27;fórceps&#x27; frente a &#x27;carpetas&#x27;.</p>
+              <p><strong>Desarrollo modelo:</strong> En &#x27;bíceps&#x27;, la s va precedida de otra consonante, por lo que lleva tilde como grave; &#x27;carpetas&#x27; termina en s simple y no lleva tilde.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Intermedio · Ejemplo 3</span>
+              <h4>Clasificación de palabras de un texto comercial</h4>
+              <p><strong>Planteamiento:</strong> Separar en sílabas, marcar la tónica y clasificar agudas, graves y esdrújulas.</p>
+              <p><strong>Desarrollo modelo:</strong> Seguir el orden sílaba tónica -&gt; posición -&gt; terminación evita errores.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Intermedio · Ejemplo 4</span>
+              <h4>Verbos con pronombres enclíticos (sobresdrújulas/esdrújulas)</h4>
+              <p><strong>Planteamiento:</strong> Analizar formas como &#x27;entrégamelo&#x27; o &#x27;analízalo&#x27;.</p>
+              <p><strong>Desarrollo modelo:</strong> Llevan tilde según su posición tónica al incorporar pronombres enclíticos.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Intermedio · Ejemplo 5</span>
+              <h4>Revisión de tilde omitida en esdrújulas</h4>
+              <p><strong>Planteamiento:</strong> Corregir palabras esdrújulas escritas sin tilde en un borrador.</p>
+              <p><strong>Desarrollo modelo:</strong> Recordar que las esdrújulas nunca carecen de tilde permite detectarlas rápido.</p>
+            </div>
+    </div>
+    <h3 class="section-sub">Nivel Avanzado (5 ejemplos resueltos)</h3>
+    <div class="cards-grid">
+      
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Avanzado · Ejemplo 1</span>
+              <h4>Corrección integral de un párrafo con fallos de tilde</h4>
+              <p><strong>Planteamiento:</strong> Identificar y corregir palabras agudas, graves y esdrújulas mal tildadas en un texto breve.</p>
+              <p><strong>Desarrollo modelo:</strong> Se justifica cada corrección aplicando la regla general correspondiente.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Avanzado · Ejemplo 2</span>
+              <h4>Precisión en redacción profesional y publicitaria</h4>
+              <p><strong>Planteamiento:</strong> Explicar cómo una tilde mal puesta o ausente altera el sentido o la corrección de un eslogan o informe.</p>
+              <p><strong>Desarrollo modelo:</strong> La ortografía acentual resguarda claridad y profesionalismo.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Avanzado · Ejemplo 3</span>
+              <h4>Clasificación mixta con justificación</h4>
+              <p><strong>Planteamiento:</strong> Clasificar seis palabras variadas (agudas, graves y esdrújulas) con y sin tilde.</p>
+              <p><strong>Desarrollo modelo:</strong> Se argumenta cada caso con su sílaba tónica y terminación.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Avanzado · Ejemplo 4</span>
+              <h4>Detección de falsas agudas o graves</h4>
+              <p><strong>Planteamiento:</strong> Revisar palabras donde el lector suele equivocar la sílaba tónica.</p>
+              <p><strong>Desarrollo modelo:</strong> Pronunciar con naturalidad y ubicar el acento prosódico aclara la categoría.</p>
+            </div>
+
+            <div class="card-ejemplo">
+              <span class="badge-nivel">Nivel Avanzado · Ejemplo 5</span>
+              <h4>Síntesis de reglas generales</h4>
+              <p><strong>Planteamiento:</strong> Redactar un resumen claro de las reglas de agudas, graves, esdrújulas y sobresdrújulas.</p>
+              <p><strong>Desarrollo modelo:</strong> Organiza la norma de forma concisa y aplicable.</p>
+            </div>
+    </div>
+    </section>
+
+    <section id="g-ejercicios" class="tab-panel">
+      
+    <h3 class="section-sub">Nivel Básico (5 ejercicios prácticos · Respuesta Autónoma)</h3>
+    <div class="cards-grid">
+      
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Básico · Ejercicio 1</span>
+              <h4>Palabra aguda con tilde</h4>
+              <p>Analizar &#x27;comunicación&#x27; (co-mu-ni-ca-ción): última sílaba tónica, termina en n. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_bas_1" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Básico · Ejercicio 2</span>
+              <h4>Palabra aguda sin tilde</h4>
+              <p>Analizar &#x27;publicidad&#x27; (pu-bli-ci-dad): última sílaba tónica, termina en d. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_bas_2" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Básico · Ejercicio 3</span>
+              <h4>Palabra grave con tilde</h4>
+              <p>Analizar &#x27;líder&#x27; (lí-der): penúltima sílaba tónica, termina en r. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_bas_3" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Básico · Ejercicio 4</span>
+              <h4>Palabra grave sin tilde</h4>
+              <p>Analizar &#x27;marca&#x27; (mar-ca): penúltima sílaba tónica, termina en a. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_bas_4" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Básico · Ejercicio 5</span>
+              <h4>Palabra esdrújula</h4>
+              <p>Analizar &#x27;mercadotecnia&#x27; o &#x27;estadística&#x27; (es-ta-dís-ti-ca). Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_bas_5" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+    </div>
+    <h3 class="section-sub">Nivel Intermedio (5 ejercicios prácticos · Respuesta Autónoma)</h3>
+    <div class="cards-grid">
+      
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Intermedio · Ejercicio 1</span>
+              <h4>Pares que cambian de sentido con la tilde</h4>
+              <p>Comparar &#x27;público&#x27;, &#x27;publico&#x27; y &#x27;publicó&#x27;. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_int_1" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Intermedio · Ejercicio 2</span>
+              <h4>Palabras graves terminadas en -s agrupada</h4>
+              <p>Observar palabras como &#x27;bíceps&#x27; o &#x27;fórceps&#x27; frente a &#x27;carpetas&#x27;. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_int_2" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Intermedio · Ejercicio 3</span>
+              <h4>Clasificación de palabras de un texto comercial</h4>
+              <p>Separar en sílabas, marcar la tónica y clasificar agudas, graves y esdrújulas. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_int_3" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Intermedio · Ejercicio 4</span>
+              <h4>Verbos con pronombres enclíticos (sobresdrújulas/esdrújulas)</h4>
+              <p>Analizar formas como &#x27;entrégamelo&#x27; o &#x27;analízalo&#x27;. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_int_4" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Intermedio · Ejercicio 5</span>
+              <h4>Revisión de tilde omitida en esdrújulas</h4>
+              <p>Corregir palabras esdrújulas escritas sin tilde en un borrador. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_int_5" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+    </div>
+    <h3 class="section-sub">Nivel Avanzado (5 ejercicios prácticos · Respuesta Autónoma)</h3>
+    <div class="cards-grid">
+      
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Avanzado · Ejercicio 1</span>
+              <h4>Corrección integral de un párrafo con fallos de tilde</h4>
+              <p>Identificar y corregir palabras agudas, graves y esdrújulas mal tildadas en un texto breve. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_adv_1" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Avanzado · Ejercicio 2</span>
+              <h4>Precisión en redacción profesional y publicitaria</h4>
+              <p>Explicar cómo una tilde mal puesta o ausente altera el sentido o la corrección de un eslogan o informe. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_adv_2" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Avanzado · Ejercicio 3</span>
+              <h4>Clasificación mixta con justificación</h4>
+              <p>Clasificar seis palabras variadas (agudas, graves y esdrújulas) con y sin tilde. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_adv_3" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Avanzado · Ejercicio 4</span>
+              <h4>Detección de falsas agudas o graves</h4>
+              <p>Revisar palabras donde el lector suele equivocar la sílaba tónica. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_adv_4" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+
+            <div class="card-ejercicio">
+              <span class="badge-nivel">Nivel Avanzado · Ejercicio 5</span>
+              <h4>Síntesis de reglas generales</h4>
+              <p>Redactar un resumen claro de las reglas de agudas, graves, esdrújulas y sobresdrújulas. Responde y justifica de manera autónoma.</p>
+              <textarea id="ej_adv_5" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta y justificación autónoma..."></textarea>
+            </div>
+    </div>
+    </section>
+
+    <section id="g-reflexion" class="tab-panel">
+      <h3 class="section-sub">Preguntas de Reflexión Crítica (Respuesta Autónoma)</h3>
+      
+        <div class="card" style="margin-bottom:14px;">
+          <span class="badge-nivel">Reflexión Crítica #1</span>
+          <h3>¿En qué tipo de palabras (agudas, graves o esdrújulas) sueles dudar más al escribir y qué estrategia te ayuda a resolverlo?</h3>
+          <textarea id="ref_1" class="resp-area" rows="3" placeholder="Redacta aquí tu reflexión personal de forma autónoma..."></textarea>
+        </div>
+        <div class="card" style="margin-bottom:14px;">
+          <span class="badge-nivel">Reflexión Crítica #2</span>
+          <h3>¿Por qué una tilde puede cambiar el tiempo verbal o el significado de una palabra en un texto?</h3>
+          <textarea id="ref_2" class="resp-area" rows="3" placeholder="Redacta aquí tu reflexión personal de forma autónoma..."></textarea>
+        </div>
+        <div class="card" style="margin-bottom:14px;">
+          <span class="badge-nivel">Reflexión Crítica #3</span>
+          <h3>¿Cómo impacta el dominio de la acentuación en la calidad de tus informes y piezas de comunicación?</h3>
+          <textarea id="ref_3" class="resp-area" rows="3" placeholder="Redacta aquí tu reflexión personal de forma autónoma..."></textarea>
+        </div>
+    </section>
+
+    <section id="g-evaluacion" class="tab-panel">
+      <h3 class="section-sub">Evaluación Formativa (Respuesta Autónoma)</h3>
+      
+        <div class="card-ejercicio" style="margin-bottom:14px;">
+          <span class="badge-nivel">Evaluación Formativa · Ítem 1</span>
+          <h4>Refuerzo conceptual 1</h4>
+          <p>Explica con tus palabras la regla general de acentuación de las palabras agudas y graves.</p>
+          <textarea id="ev_1" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta autónoma y sustento..."></textarea>
+        </div>
+        <div class="card-ejercicio" style="margin-bottom:14px;">
+          <span class="badge-nivel">Evaluación Formativa · Ítem 2</span>
+          <h4>Refuerzo conceptual 2</h4>
+          <p>¿Por qué las palabras esdrújulas y sobresdrújulas siempre llevan tilde?</p>
+          <textarea id="ev_2" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta autónoma y sustento..."></textarea>
+        </div>
+        <div class="card-ejercicio" style="margin-bottom:14px;">
+          <span class="badge-nivel">Evaluación Formativa · Ítem 3</span>
+          <h4>Refuerzo conceptual 3</h4>
+          <p>¿Qué pasos sigues para determinar si una palabra lleva tilde?</p>
+          <textarea id="ev_3" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta autónoma y sustento..."></textarea>
+        </div>
+        <div class="card-ejercicio" style="margin-bottom:14px;">
+          <span class="badge-nivel">Evaluación Formativa · Ítem 4</span>
+          <h4>Aplicación básica</h4>
+          <p>Clasifica cuatro palabras propuestas en agudas, graves o esdrújulas indicando si llevan tilde.</p>
+          <textarea id="ev_4" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta autónoma y sustento..."></textarea>
+        </div>
+        <div class="card-ejercicio" style="margin-bottom:14px;">
+          <span class="badge-nivel">Evaluación Formativa · Ítem 5</span>
+          <h4>Aplicación intermedia</h4>
+          <p>Explica la diferencia de acentuación y significado entre &#x27;público&#x27;, &#x27;publico&#x27; y &#x27;publicó&#x27;.</p>
+          <textarea id="ev_5" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta autónoma y sustento..."></textarea>
+        </div>
+        <div class="card-ejercicio" style="margin-bottom:14px;">
+          <span class="badge-nivel">Evaluación Formativa · Ítem 6</span>
+          <h4>Aplicación avanzada</h4>
+          <p>Corrige un párrafo breve con errores de acentuación general y justifica al menos tres cambios.</p>
+          <textarea id="ev_6" class="resp-area" rows="3" placeholder="Escribe aquí tu respuesta autónoma y sustento..."></textarea>
+        </div>
+    </section>
+
+    <footer class="footer-note">
+      <div><strong>Archivo de guía:</strong> guia_03_tema_03.html · <strong>Plan asociado:</strong> plan_03_tema_03.html · <strong>Sesión:</strong> 3/7</div>
+      <div>Colegio Montano · Comunicación · Quinto Bachillerato en Mercadotecnia · Unidad I (2027)</div>
+    </footer>
+  </div>
+
+  <script>
+    function openTab(evt, panelId) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(panelId).classList.add('active');
+      if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
+    }
+
+    function toggleFullScreen() {
+      const elem = document.getElementById('guiaRoot');
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) elem.requestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>
